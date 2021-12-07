@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image'
 import { useState,  useEffect } from 'react'
 import { ImCross } from 'react-icons/im'
