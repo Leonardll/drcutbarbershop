@@ -1,5 +1,9 @@
 html,
 body {
+  position: relative;
+  overflow-x:hidden;
+  background-color: transparent !important;
+  max-height: 100vh;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -9,8 +13,14 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  .nav-link {
+    padding-bottom: none;
+    
+  }
 }
 
 * {
   box-sizing: border-box;
 }
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import './Home.module.scss'
