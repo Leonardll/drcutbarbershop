@@ -17,15 +17,15 @@ function Header() {
     const [navActive, setNavactive] = useState(false);
 
     
-    useEffect(() => {       
-       
+     useEffect(() => {       
         window.addEventListener("scroll",changeNavBackground);
+        
 
-        return () => {
-        window.removeEventListener("scroll",changeNavBackground);
+         return () => {
+         window.removeEventListener("scroll",changeNavBackground);
 
         }
-    })
+     })
      const changeNavBackground = () => {
         console.log(window.scrollY);
         if(window.scrollY>= 50) {
@@ -34,10 +34,11 @@ function Header() {
             setNavactive(false)
         }
     }
+
    
     return (
         <>
-         <nav className={ !navActive ? "navbar navbar-expand-lg bg-white navbar-scroll fixed-top" :"navbar active navbar-expand-lg navbar-scroll sticky"} id="mainNav">
+         <nav className={ !navActive ? "navbar navbar-expand-lg bg-white navbar-scroll fixed-top" :"navbar active navbar-expand-lg navbar-scroll fixed-top"} id="mainNav">
             <div className="container">
                 <a className="navbar-brand px-2" href="#page-top">
                 <Image 
@@ -100,4 +101,4 @@ function Header() {
     )
 }
 
-export default Header
+export default Header;
