@@ -1,49 +1,45 @@
  const galleryLinks = [
-    {
+    {   id:1,
         title:'HairStyle',
         haircutName:'Afro',
-        imgUrl:"assets/img/portfolio/fullsize/dr.cut_thebarbers_afro.jpg",
-        imgUrl2:"assets/img/portfolio/thumbnails/dr.cut_thebarbers_afro.jpg",
+        imgUrl:"img/portfolio/fullsize/f_1.jpg",
+        imgUrl2:"/img/portfolio/thumbnails/t_1.jpg",
     },
-     {
+     {  id:2,
         title:'Hairstyle',
         haircutName:'Blondo',
-        imgUrl:"assets/img/portfolio/fullsize/dr.cut_thebarbers_blondo.jpg",
-        imgUrl2:"assets/img/portfolio/thumbnails/dr.cut_thebarbers_blondo.jpg",
+        imgUrl:"img/portfolio/fullsize/f_2.jpg",
+        imgUrl2:"/img/portfolio/thumbnails/t_2.jpg",
     },
-    {
+    {   id:3,
         title:'Hairstyle',
         haircutName:'Chica',
-        imgUrl:"assets/img/portfolio/fullsize/dr.cut_thebarbers_chica.jpg",
-        imgUrl2:"assets/img/portfolio/thumbnails/dr.cut_thebarbers_chica.jpg",
+        imgUrl:"img/portfolio/fullsize/f_3.jpg",
+        imgUrl2:"/img/portfolio/thumbnails/t_3.jpg",
     },
-    {
+    {   id:4,
         title:'Hairstyle',
         haircutName:'Nino',
-        imgUrl:"assets/img/portfolio/fullsize/dr.cut_thebarbershow_nino.jpg",
-        imgUrl2:"assets/img/portfolio/thumbnails/dr.cut_thebarbershow_nino.jpg",
+        imgUrl:"img/portfolio/fullsize/f_4.jpg",
+        imgUrl2:"/img/portfolio/thumbnails/t_4.jpg",
     },
-    {
+    {   id:5,
         title:'HairStyle',
         haircutName:'Wavy',
-        imgUrl:"assets/img/portfolio/fullsize/dr.cut_thebarbershow_wavy.jpg",
-        imgUrl2:"assets/img/portfolio/thumbnails/dr.cut_thebarbershow_wavy.jpg",
+        imgUrl:"img/portfolio/fullsize/f_5.jpg",
+        imgUrl2:"/img/portfolio/thumbnails/t_5.jpg",
     },
-    {
+    {   id:6,
         title:'HairStyle',
         haircutName:'Blondo2',
-        imgUrl:"assets/img/portfolio/fullsize/dr.cut_thebarbershow_blondo2.jpg",
-        imgUrl2:"assets/img/portfolio/thumbnails/dr.cut_thebarbershow_blondo2.jpg",
+        imgUrl:"img/portfolio/fullsize/f_6.jpg",
+        imgUrl2:"/img/portfolio/thumbnails/t_6.jpg",
     },   
     
 ]
 
   const serviceLinks = [
-    {
-        title:'study our themes',
-        text:'Our themes are updated regularly to keep them bug free!',
-        icons:"assets/img/logo/Hnet.com-image.svg",
-    },
+ 
     {
         title:'Haircut',
         text:'All dependencies are kept current to keep things fresh.',

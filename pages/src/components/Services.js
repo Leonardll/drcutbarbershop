@@ -1,26 +1,26 @@
 import { FaCircle, FaShoppingCart, FaLaptop, FaLock } from 'react-icons/fa'
-//import  { serviceLinks } from '../../../Data'
+import  { serviceLinks } from '../../../Data'
 
-//const data = serviceLinks;
-//console.log(data);
-const serviceLinks = [
+const data = serviceLinks;
+console.log(data);
+// const serviceLinks = [
     
-    {
-        title:'Haircut',
-        text:'All dependencies are kept current to keep things fresh.'
+//     {
+//         title:'Haircut',
+//         text:'All dependencies are kept current to keep things fresh.'
        
-    },
-    {
-        title:'Barberos',
-        text:'You can use this design as is, or you can make changes!'
+//     },
+//     {
+//         title:'Barberos',
+//         text:'You can use this design as is, or you can make changes!'
         
-    },
-    {
-        title:'Color',
-        text:'Is it really open source if its not made with love?'
+//     },
+//     {
+//         title:'Color',
+//         text:'Is it really open source if its not made with love?'
         
-    }, 
-]
+//     }, 
+// ]
 
 const icons = [
     FaShoppingCart, FaLaptop, FaLock
@@ -36,14 +36,14 @@ function Services () {
                     <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
                 <div className="row text-center">
-                    { serviceLinks.map((service,idx) => {
+                    { data.map((service,idx) => {
                         const Icon = icons[idx];
                         console.log(Icon)
                         return (
                             <div className="col-md-4" key={idx}>                        
                             <span className="fa-stack fa-4x">
-                                <FaCircle className="svg-inline--fa fa-circle w-16 fa-stack-2x text-dark" height={100} width={100} />
-                                <Icon className="svg-inline--fa fa-shopping-cart fa-w-18 fa-stack-1x fa-inverse" fill="white" />
+                                <FaCircle className="svg-inline--fa fa-circle w-16 fa-stack-2x text-dark"  />
+                                <Icon className="svg-inline--fa fa-shopping-cart fa-w-70 fa-stack-1x fa-inverse"  fill="white" />
                             
                             </span>
                             <h4 className="my-3">{service.title}</h4>

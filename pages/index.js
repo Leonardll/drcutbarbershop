@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Header from './src/components/Header'
 import Services from './src/components/Services'
+import Portfolio from './src/components/Portfolio'
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <main className="main">
        <Header />
        <Services />
+       <Portfolio />
       </main>
 
       <footer className="footer text-center">

@@ -29,9 +29,9 @@ function Header() {
      const changeNavBackground = () => {
         console.log(window.scrollY);
         if(window.scrollY>= 50) {
-            setNavactive(true)
-        } else {
             setNavactive(false)
+        } else {
+            setNavactive(true)
         }
     }
 
