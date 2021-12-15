@@ -6,15 +6,15 @@
 
 .main {
   //min-height: 100vh;
-  padding: 2rem 0;
+  //padding: 2rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
  #mainNav {
-    //padding-top: 1.5rem;
-    //padding-bottom: 1.5rem;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
     border: none;
     background-color: transparent;
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
@@ -118,7 +118,22 @@ section {
     right: 0;
     top: 0;
 } 
+
+svg {
+
+  
+  height: 30px;
+  position: absolute;
+  width: 30px;
+  margin: 16px;
+  /* left: -2.5px; */
+  /* right: 2.5px; */
+  display: block;
+
+
 }
+}
+
   svg:not(:root).svg-inline--fa {
     overflow: visible;
 
@@ -140,6 +155,32 @@ section {
     overflow: visible;
     vertical-align: -0.125em;
 }
+
+
+
+
+.google-map {
+  height: 50vh;
+  width: 100%;
+
+  .pin-icon{
+    font-size: 3rem;
+    color: black;
+  }
+    .pin-text {
+        font-size: 1.3em;
+      }
+
+}
+
+.fa-instagram {                                           
+  font-family: 'Font awesome 5 free';
+  content: '\f16d';
+  fill: black;  
+  height: 30px; 
+  width: 30px; 
+  color: #000;                                                                                                                      
+}                                     
 
 }
 #portfolio {
@@ -178,10 +219,18 @@ section {
   
   }
   
+  
 }
 
+.booksy-widget-container-dialog {
+  display: contents !important;
+}
 
-
+.booksy-widget-button{
+  position: relative !important;
+  display: flex !important;
+  flex-direction: center;
+}
 
 
 
@@ -202,7 +251,7 @@ section {
 }
 
 .title a {
-  color: #0070f3;
+  color: #111213;
   text-decoration: none;
 }
 
@@ -246,17 +295,17 @@ section {
   max-width: 800px;
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-}
+// .card {
+//   margin: 1rem;
+//   padding: 1.5rem;
+//   text-align: left;
+//   color: inherit;
+//   text-decoration: none;
+//   border: 1px solid #eaeaea;
+//   border-radius: 10px;
+//   transition: color 0.15s ease, border-color 0.15s ease;
+//   max-width: 300px;
+// }
 
 .card:hover,
 .card:focus,

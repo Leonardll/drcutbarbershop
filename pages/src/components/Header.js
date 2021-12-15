@@ -7,12 +7,12 @@ import Link from 'next/link'
 
 
 const navItems = [
-    {id: 1,title:"Home", ref:"/#main", to: "/main"},
+    {id: 1,title:"Home", ref:"/", to: "/"},
     {id: 2,title:"Services", ref:"/#services", to: "/services"},
-    {id: 3,title:"Gallery", ref:"/#gallery", to: "/gallery"},
+    {id: 3,title:"Gallery", ref:"/#portfolio", to: "/portfolio"},
     {id: 4,title:"Contact", ref:"/#contact", to: "/contact"},
 ]
-function Header() {
+function Header({myLoader}) {
     const [isOpen, setIsopen] = useState(false);
     const [navActive, setNavactive] = useState(false);
 
@@ -38,18 +38,21 @@ function Header() {
    
     return (
         <>
-         <nav className={ !navActive ? "navbar navbar-expand-lg bg-white navbar-scroll fixed-top" :"navbar active navbar-expand-lg navbar-scroll fixed-top"} id="mainNav">
-            <div className="container">
-                <a className="navbar-brand px-2" href="#page-top">
+         <nav className={ !navActive & !isOpen ? "navbar navbar-expand-lg navbar-scroll fixed-top" :"navbar bg-white active navbar-expand-lg navbar-scroll fixed-top"} id="mainNav">
+            <div className="container-fluid" id="main">
+            <Link href="/" passHref>
+                <a className="navbar-brand px-2" href="#main">
                 <Image 
                     src="/img/logo/logo.svg"
                     alt="" 
                     width={40}
                     height={40} 
+                    loader={myLoader}
                     
                 />{' '}
-                <small className="mb-3">The Barber Show - Dr Cut</small>
+                <small className="mb-3" href="#main">The Barber Show - Dr Cut</small>
                 </a>
+                </Link>
                 { isOpen ?
                 <ImCross className="mx-md-4 mx-xs-0  navbar-toggler cross" height={30} width={30} onClick={ ()=> setIsopen(!isOpen)} /> :
                 <button 
@@ -64,15 +67,20 @@ function Header() {
                 </button>  
                 }
                 
-                <div className={isOpen ? "collapsed navbar-collapse show" : "collapse navbar-collapse d-none" } id="navbarResponsive">
+                <div className={isOpen ? "collapsed navbar-collapse bg-white  show" : "collapse navbar-collapse d-none" } id="navbarResponsive">
                     <ul className="navbar-nav text-uppercase ms-auto my-2 my-lg-0">
                     { navItems.map((items)=> {
                         return (
                             <Link
-                            key={items.id} 
+                            key={items.id}
+                            activeClass="active" 
                             className="nav-item"
                             href={items.ref}
                             to={items.to}
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
                             passRef>
                             <a className="nav-link">{items.title}</a>
                             </Link>
