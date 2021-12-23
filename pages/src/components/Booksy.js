@@ -1,5 +1,4 @@
 
-import script from 'next/script';
 //import Script from 'next/script'
 import { useEffect } from 'react';
 const Booksy = () =>{
@@ -12,7 +11,7 @@ const Booksy = () =>{
             document.body.removeChild(script);
         }
     }, [])
-  return <div className="div"></div>
+  return null
 }
 
 export default Booksy;

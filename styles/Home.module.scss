@@ -2,6 +2,7 @@
   //padding: 0 2rem;
   max-width: 1450px;
   padding: 0px;
+
 }
 
 .main {
@@ -33,7 +34,7 @@
         flex-wrap: inherit;
         align-items: center;
         justify-content: space-between;
-    
+
     }
   }
 
@@ -51,50 +52,54 @@
     .navbar-collapsed {
       margin-top:none;
     }
-    
+
       .nav-link {
         padding-bottom: none;
         color:#000;
-    
+
         &:hover {
           color:#b0b5bd;
         }
       }
-    
-    
+
+
     .masthead {
-      min-height: 100vh;
-      padding-top: 10.5rem;
-      padding-bottom: 10.5rem;
+      min-height: 100%;
+      padding-top: 7.5rem;
+      padding-bottom: 7.5rem;
       text-align: center;
       color: #fff;
-      background-image: url(../public/img/dr.cut_thebarbershow_blue.jpg);
+      background:  linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%),url(../public/img/dr.cut_thebarbershow_blue.jpg);
       background-repeat: no-repeat;
       background-attachment: scroll;
       background-position: center center;
       background-size: cover;
       z-index: 1;
-      
-     
-    
+      width: 100vw;
+
+
+
+
       .masthead-heading {
         font-size: 3rem;
         font-weight: 700;
         line-height: 3rem;
         margin-bottom: 4rem;
+
     }
-    
-    
+
+
       .masthead-subheading {
         font-size: 1.5rem;
         font-style: italic;
         line-height: 1.5rem;
         margin-bottom: 25px;
         font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        margin-top: 3em;
     }
-    
+
     }
-    
+
 }
 .page-section {
 
@@ -117,11 +122,11 @@ section {
     position: absolute;
     right: 0;
     top: 0;
-} 
+}
 
 svg {
 
-  
+
   height: 30px;
   position: absolute;
   width: 30px;
@@ -157,7 +162,9 @@ svg {
 }
 
 
-
+#map {
+  height: 100vh;
+}
 
 .google-map {
   height: 50vh;
@@ -166,6 +173,9 @@ svg {
   .pin-icon{
     font-size: 3rem;
     color: black;
+    position: absolute;
+    height: 30px;
+    width: 30px;
   }
     .pin-text {
         font-size: 1.3em;
@@ -173,14 +183,14 @@ svg {
 
 }
 
-.fa-instagram {                                           
+.fa-instagram {
   font-family: 'Font awesome 5 free';
   content: '\f16d';
-  fill: black;  
-  height: 30px; 
-  width: 30px; 
-  color: #000;                                                                                                                      
-}                                     
+  fill: black;
+  height: 30px;
+  width: 30px;
+  color: #000;
+}
 
 }
 #portfolio {
@@ -192,11 +202,11 @@ svg {
   height: 100%;
   position: relative;
   display: block;
- 
-   
-  
+
+
+
      .portfolio-box-caption{
-     
+
       display: flex;
       align-items: center;
       justify-content: center;
@@ -215,22 +225,26 @@ svg {
       &:hover {
         opacity: 1;
       }
-  } 
-  
   }
-  
-  
+
+  }
+
+
 }
 
 .booksy-widget-container-dialog {
-  display: contents !important;
+  display: inline-flex !important;
+  margin-top: 80px;
+  margin-left: 120px;
+
 }
 
-.booksy-widget-button{
-  position: relative !important;
-  display: flex !important;
-  flex-direction: center;
-}
+// .booksy-widget-button{
+//   //position: relative !important;
+//   //display: flex !important;
+//   //flex-direction: center;
+//   //margin: 8em !important;
+// }
 
 
 
@@ -310,8 +324,8 @@ svg {
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #6c757d;
+  border-color: #6c757d;
 }
 
 .card h2 {
@@ -330,10 +344,48 @@ svg {
   margin-left: 0.5rem;
 }
 
+@media (min-width: 992px){
+.masthead {
+    height: 100vh;
+    min-height: 40rem;
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+}
+
+.booksy-widget-container-dialog {
+  display: inline-flex !important;
+  margin-top: 70px;
+  margin-left: 500px;
+
+}
+.carousel-section {
+  height: 500px;
+  width: 100vw;
+  background-color: #000;
+  
+}
+//   .carousel-inner {
+//     height: 200px;
+//     width: 100%;
+//     // background-position: center;
+//     // background-repeat: no-repeat;
+//     // background-size: cover;
+//     // display: flex;
+//   }
+}
+//}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
+  .booksy-widget-container-dialog {
+    display: inline-flex !important;
+    margin-top: 150px;
+    margin-left: 70px;
+  
+  }
+
 }
 

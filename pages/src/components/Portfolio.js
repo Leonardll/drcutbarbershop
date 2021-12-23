@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { motion } from "framer-motion"
-import { galleryLinks } from '../../../Data'
-function Portfolio ({myLoader}) {
+function Portfolio ({myLoader, galleryLinks}) {
     
 return (
     <div id="portfolio">
@@ -9,7 +8,19 @@ return (
                 <div className="row g-0">
                     { galleryLinks.map((style =>{
                         return (
-                            <motion.div key={style.id} className="col-lg-4 col-sm-6">
+                            <motion.div 
+                            key={style.id} 
+                            className="col-lg-4 col-sm-6"
+                            whileHover={{
+                                position: 'relative',
+                                zIndex:1,
+                                background:'white',
+                                scale:1.1,
+                                transition: {
+                                    duration: .2
+                                }
+
+                            }}>
                         <a className="portfolio-box" href={style.imgUrl} title="Project Name">
                             <Image
                             loader={myLoader}

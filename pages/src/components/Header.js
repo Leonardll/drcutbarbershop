@@ -4,6 +4,7 @@ import { useState,  useEffect } from 'react'
 import { ImCross } from 'react-icons/im'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 
 const navItems = [
@@ -27,8 +28,7 @@ function Header({myLoader}) {
         }
      })
      const changeNavBackground = () => {
-        console.log(window.scrollY);
-        if(window.scrollY>= 50) {
+        if(window.scrollY<= 30) {
             setNavactive(false)
         } else {
             setNavactive(true)
@@ -38,7 +38,7 @@ function Header({myLoader}) {
    
     return (
         <>
-         <nav className={ !navActive & !isOpen ? "navbar navbar-expand-lg navbar-scroll fixed-top" :"navbar bg-white active navbar-expand-lg navbar-scroll fixed-top"} id="mainNav">
+         <nav className={ !navActive & !isOpen ? "navbar navbar-expand-lg md-bg-white md-white navbar-scroll fixed-top" :"navbar bg-white active navbar-expand-lg navbar-scroll fixed-top"} id="mainNav">
             <div className="container-fluid" id="main">
             <Link href="/" passHref>
                 <a className="navbar-brand px-2" href="#main">
@@ -93,14 +93,34 @@ function Header({myLoader}) {
                 
             <header className="masthead">
             <div className="container">
-                <div className="masthead-subheading">Welcome to Dr Cut The Barber Show!</div>
-                    <div className="masthead-heading text-uppercase">
-                        <p className="text-white font-weight-bold">Your Favorite Place For Your Haircut in Barcelona</p>                        
+                <div className="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                <div className="col-lg-8 align-self-end">
+                <motion.div 
+                initial= "hidden"
+                animate="visible" 
+                className="masthead-subheading"
+                variants={{
+                    hidden:{
+                        scale:.8,
+                        opacity: 0
+                    },
+                    visible: {
+                        scale:1,
+                        opacity:1,
+                        transiton: {
+                            delay:.7
+                        }
+                    }
+                    }}>
+                    Welcome to Dr Cut The Barber Show!</motion.div>
                     </div>
+                    <div className="col-lg-8 align-self-baseline">
                     <div className="masthead-heading text-uppercase">
                         <p className="text-white mb-5">It's nice to meet you</p>
                     </div>
-                    <a className="btn btn-primary btn-xl text-uppercase" href="#about">Find Out More</a>
+                    </div>
+            </div>
+            <a className="btn btn-primary btn-xl text-uppercase" href="#about">Find Out More</a>
             </div>
         </header>
        

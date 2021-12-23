@@ -7,6 +7,8 @@ import Portfolio from './src/components/Portfolio'
 import ContactCard from './src/components/ContactCard'
 import ScrollToTop from './src/components/ScrollToTop'
 import Booksy from './src/components/Booksy'
+import { galleryLinks } from '../Data'
+
 
 const myLoader = ({ src, width, quality }) => {
   return `https://drcutthebarbershow.web.app/${src}?w=${width}&q=${
@@ -25,10 +27,12 @@ export default function Home() {
       <main className="main">
        <Header myLoader={myLoader} />
        <Services />
-       <Portfolio myLoader={myLoader} />
-       <ContactCard />
+       <Portfolio myLoader={myLoader} galleryLinks={galleryLinks} />
+        <ContactCard />
+       <Booksy />
+     
       </main>
-      <Booksy />
+    
 
       <footer className="footer text-center">
         <a
