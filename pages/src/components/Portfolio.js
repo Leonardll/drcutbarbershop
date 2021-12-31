@@ -1,52 +1,35 @@
-import Image from 'next/image'
-import { motion } from "framer-motion"
-function Portfolio ({myLoader, galleryLinks}) {
-    
-return (
-    <div id="portfolio">
-            <div className="container-fluid p-0">
-                <div className="row g-0">
-                    { galleryLinks.map((style =>{
-                        return (
-                            <motion.div 
-                            key={style.id} 
-                            className="col-lg-4 col-sm-6"
-                            whileHover={{
-                                position: 'relative',
-                                zIndex:1,
-                                background:'white',
-                                scale:1.1,
-                                transition: {
-                                    duration: .2
-                                }
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { galleryLinks } from "../../../Data";
+import Carousel from "react-bootstrap/Carousel";
 
-                            }}>
-                        <a className="portfolio-box" href={style.imgUrl} title="Project Name">
-                            <Image
-                            loader={myLoader}
-                            layout="responsive" 
-                            width={70} 
-                            height={70} 
-                            className="img-fluid" 
-                            src={`/img/portfolio/thumbnails/t_${style.id}.jpg`} 
-                            alt="..."/>
-                            <div className="portfolio-box-caption">
-                                <div className="project-category text-white-50">{style.title}</div>
-                                <div className="project-name">{style.haircutName}</div>
-                            </div>
-                        </a>
-                    </motion.div>
-                        )
 
-                        
-                        
-                    
-                    }
-                    ))}
-                </div>
-            </div>
-        </div>
-)
+function Mycarousel ({myLoader}) {
+  return (
+    <section className="page-section">
+      <Carousel variant="light">
+      {galleryLinks.map((haircut) => {
+          return (
+           <Carousel.Item key={haircut.id}>
+           <Image
+             layout="responsive"
+             loader={myLoader}
+             width={500}
+             height={500}
+             className="d-block w-100"
+             src={`/img/portfolio/thumbnails/t_${haircut.id}.jpg`}
+             alt="..."
+           />
+           <Carousel.Caption>
+             <h5>{haircut.title}</h5>
+             <p>{haircut.haircutName}</p>
+           </Carousel.Caption>
+         </Carousel.Item>
+          )
+      })}
+    </Carousel>
+    </section>
+  )
 }
 
-export default Portfolio;
+export default Mycarousel;

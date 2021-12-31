@@ -7,8 +7,8 @@ import LocactionCard from './LocationCard'
 
 function ContactCard() {
     return (
-        <section className="page-section w-100" id="contact">
-        <div className="row bg-dark justify-content-center">
+        <section className="page-section py-0 w-100" id="contact">
+        <div className="row bg-light justify-content-center">
             <div className="col-lg-8 mb-4">
                 <Card>
                     <Card.Body>
