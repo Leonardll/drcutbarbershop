@@ -1,10 +1,5 @@
  const galleryLinks = [
-    {   id:1,
-        title:'HairStyle',
-        haircutName:'Afro',
-        imgUrl:"img/portfolio/fullsize/f_1.jpg",
-        imgUrl2:"/img/portfolio/thumbnails/t_1.jpg",
-    },
+  
      {  id:2,
         title:'Hairstyle',
         haircutName:'Blondo',
@@ -43,18 +38,36 @@
     {
         title:'Haircut',
         text:'All dependencies are kept current to keep things fresh.',
-        icons:"assets/img/logo/clipper.svg",
+        icons:"/img/logo/clipper.svg",
     },
     {
         title:'Barberos',
         text:'You can use this design as is, or you can make changes!',
-        icons:"assets/img/logo/barber_chair.svg",
+        icons:"/img/logo/barber_chair.svg",
     },
     {
         title:'Color',
         text:'Is it really open source if its not made with love?',
-        icons:"assets/img/logo/hairstyle.svg",
+        icons:"/img/logo/hairstyle.svg",
     }, 
 ]
 
-export { galleryLinks,  serviceLinks};
+const barber = [
+    {
+        name:'geico',
+        description:'',
+        image:"/img/logo/geico.jpg",
+    },
+    {
+        name:'tauste',
+        description:'',
+        image:"/img/logo/tauste.jpg",
+    },
+    {
+        name:'hander',
+        description:'',
+        image:"/img/logo/hander.jpg",
+    }
+]
+
+export { galleryLinks,  serviceLinks, barber};

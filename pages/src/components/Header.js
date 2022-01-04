@@ -11,7 +11,8 @@ const navItems = [
     {id: 1,title:"Home", ref:"/", to: "/"},
     {id: 2,title:"Services", ref:"/#services", to: "/services"},
     {id: 3,title:"Gallery", ref:"/#portfolio", to: "/portfolio"},
-    {id: 4,title:"Contact", ref:"/#contact", to: "/contact"},
+    {id: 4,title:"Team", ref:"/#team", to: "/team"},
+    {id: 5,title:"Contact", ref:"/#contact", to: "/contact"},
 ]
 function Header({myLoader}) {
     const [isOpen, setIsopen] = useState(false);
@@ -38,7 +39,7 @@ function Header({myLoader}) {
    
     return (
         <>
-         <nav className={ !navActive & !isOpen ? "navbar navbar-expand-lg md-bg-white md-white navbar-scroll fixed-top" :"navbar bg-white active navbar-expand-lg navbar-scroll fixed-top"} id="mainNav">
+         <nav className={ !navActive & !isOpen ? "navbar navbar-expand-lg md-bg-dark md-dark navbar-scroll fixed-top" :"navbar bg-dark active navbar-expand-lg navbar-scroll fixed-top"} id="mainNav">
             <div className="container-fluid" id="main">
             <Link href="/" passHref>
                 <a className="navbar-brand px-2" href="#main">
@@ -48,9 +49,10 @@ function Header({myLoader}) {
                     width={40}
                     height={40} 
                     loader={myLoader}
+                    fill="black"
                     
                 />{' '}
-                <small className="mb-3" href="#main">The Barber Show - Dr Cut</small>
+                <small className="mb-3" href="#main">Dr Cut</small>
                 </a>
                 </Link>
                 { isOpen ?
@@ -67,7 +69,7 @@ function Header({myLoader}) {
                 </button>  
                 }
                 
-                <div className={isOpen ? "collapsed navbar-collapse bg-white  show" : "collapse navbar-collapse d-none" } id="navbarResponsive">
+                <div className={isOpen ? "collapsed navbar-collapse bg-dark  show" : "collapse navbar-collapse d-none" } id="navbarResponsive">
                     <ul className="navbar-nav text-uppercase ms-auto my-2 my-lg-0">
                     { navItems.map((items)=> {
                         return (
@@ -112,11 +114,11 @@ function Header({myLoader}) {
                         }
                     }
                     }}>
-                    Welcome to Dr Cut The Barber Show!</motion.div>
+                    Welcome to The Barber Show!</motion.div>
                     </div>
                     <div className="col-lg-8 align-self-baseline">
                     <div className="masthead-heading text-uppercase">
-                        <p className="text-white mb-5">It's nice to meet you</p>
+                        <p className="text-white mb-5">¡Que comience el espectáculo!</p>
                     </div>
                     </div>
             </div>

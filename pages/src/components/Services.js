@@ -1,4 +1,4 @@
-import { FaCircle, FaShoppingCart, FaLaptop, FaLock } from 'react-icons/fa'
+import { FaCircle } from 'react-icons/fa'
 import  { serviceLinks } from '../../../Data'
 import { motion } from 'framer-motion'
 //import{ BarberChair, Clipper, HairStyle} from './Icons'
