@@ -40,7 +40,7 @@ function Header({myLoader}) {
     return (
         <>
          <nav className={ !navActive & !isOpen ? "navbar navbar-expand-lg md-bg-dark md-dark navbar-scroll fixed-top" :"navbar bg-dark active navbar-expand-lg navbar-scroll fixed-top"} id="mainNav">
-            <div className="container-fluid" id="main">
+            <div className="container-fluid p-0" id="main">
             <Link href="/" passHref>
                 <a className="navbar-brand px-2" href="#main">
                 <Image 
@@ -52,7 +52,7 @@ function Header({myLoader}) {
                     fill="black"
                     
                 />{' '}
-                <small className="mb-3" href="#main">Dr Cut</small>
+                <small className="mb-3 text-uppercase" href="#main">Dr.Cut</small>
                 </a>
                 </Link>
                 { isOpen ?
@@ -93,11 +93,11 @@ function Header({myLoader}) {
             </div>
         </nav>
                 
-            <header className="masthead">
+            <header className="masthead w-100">
             <div className="container">
                 <div className="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                 <div className="col-lg-8 align-self-end">
-                <motion.div 
+                {/* <motion.div 
                 initial= "hidden"
                 animate="visible" 
                 className="masthead-subheading"
@@ -114,15 +114,15 @@ function Header({myLoader}) {
                         }
                     }
                     }}>
-                    Welcome to The Barber Show!</motion.div>
+                    Welcome to The Barber Show!</motion.div> */}
                     </div>
                     <div className="col-lg-8 align-self-baseline">
                     <div className="masthead-heading text-uppercase">
-                        <p className="text-white mb-5">¡Que comience el espectáculo!</p>
+                        <p className="text-white">¡Que comience el espectáculo!</p>
                     </div>
                     </div>
             </div>
-            <a className="btn btn-primary btn-xl text-uppercase" href="#about">Find Out More</a>
+            <a className="btn btn-primary btn-xl text-uppercase d-none" href="#about">Find Out More</a>
             </div>
         </header>
        

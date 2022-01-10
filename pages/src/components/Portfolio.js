@@ -5,7 +5,7 @@ import Carousel from "react-bootstrap/Carousel";
 
 function Mycarousel ({myLoader}) {
   return (
-    <section className="page-section h-50" id="portfolio">
+    <section className="page-section" id="portfolio">
       <Carousel fade variant="light">
       {galleryLinks.map((haircut) => {
           return (
@@ -13,11 +13,13 @@ function Mycarousel ({myLoader}) {
            <Image
              layout="responsive"
              loader={myLoader}
-             width={100}
-             height={70}
-             className="d-block w-100 img-fluid"
+             width={250}
+             height={250}
+             className="d-block img-fluid"
              src={`/img/portfolio/thumbnails/t_${haircut.id}.jpg`}
              alt="..."
+             objectFit="cover"
+             priority={true}
            />
            <Carousel.Caption>
              <h5>{haircut.title}</h5>

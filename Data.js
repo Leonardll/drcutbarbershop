@@ -54,20 +54,16 @@
 
 const barber = [
     {
-        name:'geico',
+        name:'hander',
         description:'',
-        image:"/img/logo/geico.jpg",
+        image:"/img/logo/hander.jpg",
     },
     {
         name:'tauste',
         description:'',
         image:"/img/logo/tauste.jpg",
-    },
-    {
-        name:'hander',
-        description:'',
-        image:"/img/logo/hander.jpg",
     }
+    
 ]
 
 export { galleryLinks,  serviceLinks, barber};
