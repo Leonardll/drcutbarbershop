@@ -55,12 +55,12 @@
 const barber = [
     {
         name:'hander',
-        description:'',
+        description:'Colombiano, llegado a Barcelona despues de pasar por Mexico y Peru, en busca siempre de un aprendizaje constante.',
         image:"/img/logo/hander.jpg",
     },
     {
         name:'tauste',
-        description:'',
+        description:'Actitud y ganas de superacion, joven y con muchisima proyecccion. Ready para dar el mejor servicio siempre con una sonrisa en la cara. ',
         image:"/img/logo/tauste.jpg",
     }
     

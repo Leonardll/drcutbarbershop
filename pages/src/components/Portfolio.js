@@ -20,6 +20,7 @@ function Mycarousel ({myLoader}) {
              alt="..."
              objectFit="cover"
              priority={true}
+            
            />
            <Carousel.Caption>
              <h5>{haircut.title}</h5>
