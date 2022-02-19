@@ -1,9 +1,10 @@
-.container {
-  //padding: 0 2rem;
-  width: 100%;
-  padding: 0px;
 
-}
+// .container {
+//   //padding: 0 2rem;
+//   width: 100%;
+//   padding: 0px;
+
+// }
 
 .main {
   //min-height: 100vh;
@@ -47,15 +48,21 @@
     }
     }
     .navbar-collapse {
-      //background-color:#fff;
       top: 0;
-      margin-top:20px;
+      align-self: flex-end;
     }
     .navbar-collapsed {
       margin-top:none;
     }
+    .navbar-toggler-icon {
+      
+      font-size: 1.5em;
+    }
 
-      .nav-link {
+    
+     .navbar .nav-link {
+        padding-right: 1rem;
+        padding-left: 0.5rem;
         margin-left: 10px;
         padding-bottom: none;
         color:#fff;
@@ -87,7 +94,7 @@
         font-size: 3rem;
         font-weight: 700;
         line-height: 3rem;
-        margin-bottom: 4rem;
+        //margin-bottom: 4rem;
 
     }
 
@@ -201,9 +208,10 @@ svg {
 
 .booksy-widget-container-dialog {
   display: block !important; 
-  width:100% !important; 
-  /* height: 258px; */
-  text-align: center;
+  
+   width:100% !important; 
+    margin-top: 30px ;
+  // text-align: center;
   
 }
 
@@ -330,26 +338,40 @@ svg {
 }
 
 @media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+  // .grid {
+  //   width: 100%;
+  //   flex-direction: column;
+  // }
+  .masthead {
+    min-width: 100vh;
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+    min-height: 70rem;
+
   }
-  
 
 }
 
 @media (min-width: 992px){
-.masthead {
-    height: 1000px;
-    padding-top: 4.5rem;
-    padding-bottom: 0;
+// .masthead {
+//     min-width: 100vh;
+//     padding-top: 4.5rem;
+//     padding-bottom: 0;
+//     min-height: 70rem;
 
-    .masthead-subheading{
-      margin-top: 2em;
-      margin-bottom: 3em;
-    }
+//     .masthead-heading{
+//       margin-top: 4.5em;
+//       margin-bottom: 3em;
+//     }
+// }
+.booksy-widget-container-dialog {
+  display: block !important; 
+  
+   width:100% !important; 
+    margin-top: 30px ;
+  // text-align: center;
+  
 }
-
 
 }
 

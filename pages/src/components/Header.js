@@ -39,20 +39,21 @@ function Header({myLoader}) {
    
     return (
         <>
-         <nav className={ !navActive & !isOpen ? "navbar navbar-expand-lg md-bg-dark md-dark navbar-scroll fixed-top" :"navbar bg-dark active navbar-expand-lg navbar-scroll fixed-top"} id="mainNav">
+         <nav className={ !navActive & !isOpen ? "navbar navbar-expand-lg bg-dark navbar-scroll fixed-top" :"navbar bg-dark active navbar-expand-lg navbar-scroll fixed-top"} id="mainNav">
             <div className="container-fluid p-0" id="main">
             <Link href="/" passHref>
                 <a className="navbar-brand px-2" href="#main">
                 <Image 
                     src="/img/logo/logo.svg"
                     alt="" 
-                    width={40}
-                    height={40} 
+                    width={100}
+                    height={80} 
                     loader={myLoader}
                     fill="black"
+                    priority={true}
+                    //layout='responsive'
                     
                 />{' '}
-                <small className="mb-3 text-uppercase" href="#main">Dr.Cut</small>
                 </a>
                 </Link>
                 { isOpen ?
@@ -73,7 +74,7 @@ function Header({myLoader}) {
                     <ul className="navbar-nav text-uppercase ms-auto my-2 my-lg-0">
                     { navItems.map((items)=> {
                         return (
-                            <Link
+                                          <Link
                             key={items.id}
                             activeClass="active" 
                             className="nav-item"
@@ -116,7 +117,7 @@ function Header({myLoader}) {
                     }}>
                     Welcome to The Barber Show!</motion.div> */}
                     </div>
-                    <div className="col-lg-8 align-self-baseline">
+                    <div className="col-lg-8 align-self-end">
                     <div className="masthead-heading text-uppercase">
                         <p className="text-white">¡Que comience el espectáculo!</p>
                     </div>
