@@ -38,9 +38,9 @@ function Header({myLoader}) {
 
    
     return (
-        <>
+        <div className='container'>
          <nav className={ !navActive & !isOpen ? "navbar navbar-expand-lg bg-dark navbar-scroll fixed-top" :"navbar bg-dark active navbar-expand-lg navbar-scroll fixed-top"} id="mainNav">
-            <div className="container-fluid p-0" id="main">
+            <div className="container-fluid" id="main">
             <Link href="/" passHref>
                 <a className="navbar-brand px-2" href="#main">
                 <Image 
@@ -94,28 +94,11 @@ function Header({myLoader}) {
             </div>
         </nav>
                 
-            <header className="masthead w-100">
+            <header className="masthead">
             <div className="container">
                 <div className="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                 <div className="col-lg-8 align-self-end">
-                {/* <motion.div 
-                initial= "hidden"
-                animate="visible" 
-                className="masthead-subheading"
-                variants={{
-                    hidden:{
-                        scale:.8,
-                        opacity: 0
-                    },
-                    visible: {
-                        scale:1,
-                        opacity:1,
-                        transiton: {
-                            delay:.7
-                        }
-                    }
-                    }}>
-                    Welcome to The Barber Show!</motion.div> */}
+         
                     </div>
                     <div className="col-lg-8 align-self-end">
                     <div className="masthead-heading text-uppercase">
@@ -127,7 +110,7 @@ function Header({myLoader}) {
             </div>
         </header>
        
-        </>
+        </div>
       
     )
 }
