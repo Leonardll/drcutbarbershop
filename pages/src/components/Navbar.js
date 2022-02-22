@@ -14,14 +14,14 @@ const navItems = [
     {id: 4,title:"Team", ref:"/#team", to: "/team"},
     {id: 5,title:"Contact", ref:"/#contact", to: "/contact"},
 ]
-function Header({myLoader}) {
+function Navbar ({myLoader}) {
     const [isOpen, setIsopen] = useState(false);
     const [navActive, setNavactive] = useState(false);
 
-    
-     useEffect(() => {       
+
+     useEffect(() => {
         window.addEventListener("scroll",changeNavBackground);
-        
+
 
          return () => {
          window.removeEventListener("scroll",changeNavBackground);
@@ -36,47 +36,47 @@ function Header({myLoader}) {
         }
     }
 
-   
+
     return (
-        <div className='container'>
-         <nav className={ !navActive & !isOpen ? "navbar navbar-expand-lg bg-dark navbar-scroll fixed-top" :"navbar bg-dark active navbar-expand-lg navbar-scroll fixed-top"} id="mainNav">
+        <div className='container-fluid p-0'>
+         <nav className= "navbar navbar-expand-lg bg-dark navbar-scroll fixed-top" id="mainNav">
             <div className="container-fluid" id="main">
             <Link href="/" passHref>
                 <a className="navbar-brand px-2" href="#main">
-                <Image 
+                <Image
                     src="/img/logo/logo.svg"
-                    alt="" 
+                    alt=""
                     width={100}
-                    height={80} 
+                    height={80}
                     loader={myLoader}
                     fill="black"
                     priority={true}
                     //layout='responsive'
-                    
+
                 />{' '}
                 </a>
                 </Link>
                 { isOpen ?
                 <ImCross className="mx-md-4 mx-xs-0  navbar-toggler cross" height={30} width={30} onClick={ ()=> setIsopen(!isOpen)} /> :
-                <button 
+                <button
                 onClick={()=> setIsopen(!isOpen)}
-                className="navbar-toggler navbar-toggler-right btn-light px-xs-0 px-md-4 px-lg-5" 
-                type="button" data-bs-toggle="collapse" 
-                data-bs-target="#navbarResponsive" 
-                aria-controls="navbarResponsive" 
-                aria-expanded="false" 
+                className="navbar-toggler navbar-toggler-right btn-light px-xs-0 px-md-4 px-lg-5"
+                type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive"
+                aria-expanded="false"
                 aria-label="Toggle navigation">
                 <GiHamburgerMenu className="navbar-toggler-icon mt-2"/>
-                </button>  
+                </button>
                 }
-                
+
                 <div className={isOpen ? "collapsed navbar-collapse bg-dark  show" : "collapse navbar-collapse d-none" } id="navbarResponsive">
                     <ul className="navbar-nav text-uppercase ms-auto my-2 my-lg-0">
                     { navItems.map((items)=> {
                         return (
                                           <Link
                             key={items.id}
-                            activeClass="active" 
+                            activeClass="active"
                             className="nav-item"
                             href={items.ref}
                             to={items.to}
@@ -88,17 +88,17 @@ function Header({myLoader}) {
                             <a className="nav-link">{items.title}</a>
                             </Link>
                         )})
-                    }                   
+                    }
                     </ul>
                 </div>
             </div>
         </nav>
-                
+
             <header className="masthead">
             <div className="container">
                 <div className="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                 <div className="col-lg-8 align-self-end">
-         
+
                     </div>
                     <div className="col-lg-8 align-self-end">
                     <div className="masthead-heading text-uppercase">
@@ -109,10 +109,10 @@ function Header({myLoader}) {
             <a className="btn btn-primary btn-xl text-uppercase d-none" href="#about">Find Out More</a>
             </div>
         </header>
-       
+
         </div>
-      
+
     )
 }
 
-export default Header;
+export default Navbar;

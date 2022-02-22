@@ -1,9 +1,8 @@
 html,
 body {
-  position: relative;
-  overflow:hidden;
+  overflow-x:hidden;
   background-color: transparent !important;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -11,25 +10,13 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-  .nav-link {
-    padding-bottom: none;
-    
-  }
-}
+
 
 * {
   box-sizing: border-box;
 }
-#__next {
-  height: 100%;
 
-}
 
 #map {
       height: 50vh;                                                                      
 }
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
-@import './Home.module.scss'

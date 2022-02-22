@@ -1,0 +1,292 @@
+
+//  header {
+//   position: absolute;
+  
+//  }
+.navbar {
+    .navbar-toggler-icon {
+      color:white;
+      height: 2em;
+      width: 2em;
+      .cross{
+        height:2em;
+        width:2em;
+        color:white;
+      }
+     
+    }
+    .nav-link {
+      color: #fff;
+      &:hover, :focus {
+        color: rgb(80, 79, 79);
+      a {
+        color: #fff;
+        &:hover {
+          color: rgb(80, 79, 79);
+        }
+
+      
+      }
+    }
+
+    
+   
+   
+  }
+
+  .navbar-brand {
+
+    small {
+      color:#fff;
+    }
+
+    }
+
+}
+   
+
+
+    .masthead {
+      min-height: 100vh;
+      padding-top: calc( 15% + 18rem);
+      background-image:url(../public/img/dr.cut_thebarbershow_blue.jpg);
+      padding-bottom: 7.5rem;
+      text-align: center;
+      color: #fff;
+      background-repeat: no-repeat ;
+      background-attachment: scroll;
+      background-position: 50% 30%;
+      background-size:cover;
+      width: 100vw;
+      top: 2em;
+     //position: relative;
+      z-index: -1;
+      overflow: hidden;
+
+    }
+
+
+    .masthead-heading {
+      font-size: 5vw;
+      font-weight: 700;
+      line-height: 10vh;
+  }
+
+
+      .masthead-subheading {
+        font-size: 1.5rem;
+        font-style: italic;
+        line-height: 1.5rem;
+        margin-bottom: 3em;
+        font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        margin-top: 2em;
+    }
+
+    
+
+
+
+section {
+  .fa-stack {
+    display: inline-block;
+    height: 4em;
+    position: relative;
+    width: 4em;
+    .fa-4x {
+      font-size: 4em;
+  }
+  .fa-stack-1x, .fa-stack-2x {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+svg {
+  height: 30px;
+  position: absolute;
+  width: 30px;
+  margin: 16px;
+  /* left: -2.5px; */
+  /* right: 2.5px; */
+  display: block;
+
+  svg:not(:root).svg-inline--fa {
+    overflow: visible;
+
+    :not(svg) {
+      transform-origin: 0px 0px;
+  }
+}
+
+}
+
+}
+
+
+.svg-inline--fa.fa-stack-2x {
+  height: 4em;
+  width: 4em;
+}
+
+
+  .svg-inline--fa {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+}
+
+
+#map {
+  height: 100vh;
+}
+
+.google-map {
+  height: 50vh;
+  width: 100%;
+  //position: relative;
+
+  .pin-icon{
+    font-size: 3rem;
+    color: black;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+  }
+    .pin-text {
+        font-size: 1.3em;
+      }
+
+}
+
+.fa-instagram {
+  font-family: 'Font awesome 5 free';
+  content: '\f16d';
+  fill: black;
+  height: 30px;
+  width: 30px;
+  color: #000;
+}
+
+}
+
+
+
+.booksy-widget-container-dialog {
+  display: inline-block;
+  width: 200px;
+  height: 70px;
+  text-align: center;
+  position: relative;
+  left: calc(50% - 100px);
+}
+
+
+
+
+
+
+// .carousel {
+//   height: auto;
+//   width: 80vw;
+//   background-color: #000;
+
+//   .carousel-inner {
+//     height: 100%;
+//     width: 100%;
+//   }
+
+
+//   .carousel-item {
+//     height: 100%;
+//   }
+  
+// }
+
+.team-member {
+  margin-bottom: 3rem;
+  text-align: center;
+
+  .img-fluid{
+    width: 14rem;
+    height: 14rem;
+    border: 0.5rem solid rgba(0, 0, 0, 0.1) !important;
+}
+
+}
+
+// .footer {
+  
+   
+//   display: flex;
+//   flex: 1;
+//   padding: 2rem 0;
+//   border-top: 1px solid #eaeaea;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .footer a {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-grow: 1;
+// }
+
+
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+  Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+
+//
+
+}
+
+@media (min-width: 992px){
+
+  .masthead {
+    min-height: 100vh;
+    padding-top: calc( 15% + 18rem);
+    background-image:url(../public/img/dr.cut_thebarbershow_blue.jpg);
+    padding-bottom: 7.5rem;
+    text-align: center;
+    color: #fff;
+    background-repeat: no-repeat ;
+    background-attachment: scroll;
+    background-position: 60% 35%;
+    background-size:cover;
+    width: 100vw;
+    top: 2em;
+   //position: relative;
+    z-index: -1;
+    overflow: hidden;
+
+  }
+
+}
+
+@import "~bootstrap/scss/bootstrap.scss";
+
+
+

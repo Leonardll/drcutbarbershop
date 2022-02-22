@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.scss";
 import Header from "./src/components/Header";
 import Services from "./src/components/Services";
 import ContactCard from "./src/components/ContactCard";
