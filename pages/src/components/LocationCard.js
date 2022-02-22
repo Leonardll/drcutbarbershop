@@ -58,7 +58,7 @@ function LocationCard () {
 
   return (
       <div className="container w-100 h-100">
-        <h3>Come Visit Us at the shop</h3>
+        <h3 className='map-title fs-3'>Come Visit Us at the shop</h3>
     <div id="map" ref={googlemap} />
     </div>
   );

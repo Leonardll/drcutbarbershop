@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { BiArrowFromBottom } from "react-icons/bi";
 
-function ScrollToTop ()  {
+const  ScrollToTop =  ()  =>  {
     const [isVisible, setIsVisible] = useState(false);
 
     const toggleVisibility = () => {
+        console.log(pageYOffset)
         if(window.pageYOffset > 300) {
+            console.log(window.pageYOffset)
             setIsVisible(true)
         } else {
             setIsVisible(false)
@@ -31,7 +33,7 @@ function ScrollToTop ()  {
             { isVisible ?
             <button 
             type="button" 
-            onClick={scrollToTop} 
+            onClick={ () => scrollToTop} 
             className="opacity-75 btn btn-dark btn-floating btn-lg"
             > 
             <BiArrowFromBottom />

@@ -1,17 +1,16 @@
 
-//  header {
-//   position: absolute;
-  
-//  }
+.page-section {
+  padding: 6rem 0;
+}
 .navbar {
     .navbar-toggler-icon {
-      color:white;
+      //color:white;
       height: 2em;
       width: 2em;
       .cross{
         height:2em;
         width:2em;
-        color:white;
+        //color:white;
       }
      
     }
@@ -27,10 +26,7 @@
 
       
       }
-    }
-
-    
-   
+    } 
    
   }
 
@@ -89,9 +85,9 @@
 section {
   .fa-stack {
     display: inline-block;
-    height: 4em;
+    height: 7em;
     position: relative;
-    width: 4em;
+    width: 7em;
     .fa-4x {
       font-size: 4em;
   }
@@ -105,12 +101,14 @@ section {
 }
 
 svg {
-  height: 30px;
+  height: 3em;
   position: absolute;
-  width: 30px;
+  width: 3em;
   margin: 16px;
-  /* left: -2.5px; */
-  /* right: 2.5px; */
+  left: 14%; 
+  right: 14%; 
+  top: 14%;
+    bottom: 14%;
   display: block;
 
   svg:not(:root).svg-inline--fa {
@@ -127,8 +125,8 @@ svg {
 
 
 .svg-inline--fa.fa-stack-2x {
-  height: 4em;
-  width: 4em;
+  height: 7em;
+  width: 7em;
 }
 
 
@@ -142,7 +140,7 @@ svg {
 
 
 #map {
-  height: 100vh;
+  height: 50vh;
 }
 
 .google-map {
@@ -186,27 +184,6 @@ svg {
 }
 
 
-
-
-
-
-// .carousel {
-//   height: auto;
-//   width: 80vw;
-//   background-color: #000;
-
-//   .carousel-inner {
-//     height: 100%;
-//     width: 100%;
-//   }
-
-
-//   .carousel-item {
-//     height: 100%;
-//   }
-  
-// }
-
 .team-member {
   margin-bottom: 3rem;
   text-align: center;
@@ -230,18 +207,17 @@ svg {
 //   align-items: center;
 // }
 
-// .footer a {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-grow: 1;
-// }
+.footer a {
+   display: flex;
+   justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
 
 
 
-.card h2 {
+.map-title {
   margin: 0 0 1rem 0;
-  font-size: 1.5rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
   Bitstream Vera Sans Mono, Courier New, monospace;
 }
@@ -259,7 +235,7 @@ svg {
 
 @media (max-width: 600px) {
 
-//
+
 
 }
 

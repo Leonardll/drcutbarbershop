@@ -7,8 +7,12 @@ function Mycarousel ({myLoader}) {
   
   return (
     <section className="page-section" id="portfolio">
-      <div className="container">
-        
+      <div className="container-fluid">
+      <div className="text-center mb-5">
+       <h2 className="section-heading text-uppercase">Gallery</h2>
+      </div>
+      <div className="container-fluid">
+
       <Carousel fade variant="light">
       {galleryLinks.map((haircut) => {
         return (
@@ -34,6 +38,7 @@ function Mycarousel ({myLoader}) {
           )
         })}
     </Carousel>
+        </div>
         </div>                                                                    
     </section>
   )

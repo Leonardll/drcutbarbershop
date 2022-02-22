@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { barber } from "../../../Data"
+
 //import { storage ,getAllItems,getRef } from '../../../base';
 //import { useEffect } from 'react';
 //import { firestore } from 'firebase-functions/v1';
@@ -24,35 +24,34 @@ import { barber } from "../../../Data"
 //     console.log("Error",error)
 //   });
 // }
-// //console.log(storage);
+ //console.log(storage);
 
-// //  const getBarberPic = async () => {
-// //      const snapshot = await barberCol('barber').get()
-// //      snapshot.docs.forEach((doc) => console.log(doc.data()));
-// //  }
+ //  const getBarberPic = async () => {
+ //      const snapshot = await barberCol('barber').get()
+ //      snapshot.docs.forEach((doc) => console.log(doc.data()));
+ //  }
 
 
-function Team ({myLoader}) {
-                                                            
-//   useEffect(() => {
-//            getBarber();                                                                                                                                                                                 
-        
-//        }, [])
+function Team ({docs}) {
+    
+                                                    
+
     return (
-        <section className="page-section bg-light w-100" id="team">
-            <div className="container">
-                <div className="text-center">
+        <section className="page-section bg-white w-100" id="team">
+            <div className="container-fluid">
+                <div className="text-center mb-5">
                     <h2 className="section-heading text-uppercase">Equipo</h2>
                 </div>
-                <div className="row">
-                    {barber.map((barber) => {
+                <div className="row justify-content-around">
+                    {docs.map((barber) => {
+                        
                         return (
-                            <div className="col-lg-6" key={barber.name}>
+                            <div className="col-lg-4" key={barber.id}>
                             <div className="team-member">
                                 <Image
-                                loader={myLoader}  
+                                 
                                 className="mx-auto rounded-circle img-fluid" 
-                                src={`/img/logo/${barber.name}.jpg`} 
+                                src={barber.image} 
                                 alt="..."
                                 width={250}
                                 height={250}

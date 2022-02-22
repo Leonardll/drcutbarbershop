@@ -2,13 +2,13 @@
 import Image from 'next/image'
 import { useState,  useEffect } from 'react'
 import { ImCross } from 'react-icons/im'
-import { GiHamburgerMenu } from 'react-icons/gi'
+import { FaBars } from 'react-icons/fa'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 
 const navItems = [
-    {id: 1,title:"Home", ref:"/", to: "/"},
+    {id: 1,title:"Home", ref:"/#main", to: "/main"},
     {id: 2,title:"Services", ref:"/#services", to: "/services"},
     {id: 3,title:"Gallery", ref:"/#portfolio", to: "/portfolio"},
     {id: 4,title:"Team", ref:"/#team", to: "/team"},
@@ -18,30 +18,11 @@ function Navbar ({myLoader}) {
     const [isOpen, setIsopen] = useState(false);
     const [navActive, setNavactive] = useState(false);
 
-
-     useEffect(() => {
-        window.addEventListener("scroll",changeNavBackground);
-
-
-         return () => {
-         window.removeEventListener("scroll",changeNavBackground);
-
-        }
-     })
-     const changeNavBackground = () => {
-        if(window.scrollY<= 30) {
-            setNavactive(false)
-        } else {
-            setNavactive(true)
-        }
-    }
-
-
     return (
         <div className='container-fluid p-0'>
-         <nav className= "navbar navbar-expand-lg bg-dark navbar-scroll fixed-top" id="mainNav">
-            <div className="container-fluid" id="main">
-            <Link href="/" passHref>
+         <nav className= "navbar navbar-expand-lg navbar-dark bg-dark scroll  fixed-top" id="mainNav">
+            <div className="container-fluid">
+            <Link href="/#main" passHref>
                 <a className="navbar-brand px-2" href="#main">
                 <Image
                     src="/img/logo/logo.svg"
@@ -56,8 +37,7 @@ function Navbar ({myLoader}) {
                 />{' '}
                 </a>
                 </Link>
-                { isOpen ?
-                <ImCross className="mx-md-4 mx-xs-0  navbar-toggler cross" height={30} width={30} onClick={ ()=> setIsopen(!isOpen)} /> :
+                
                 <button
                 onClick={()=> setIsopen(!isOpen)}
                 className="navbar-toggler navbar-toggler-right btn-light px-xs-0 px-md-4 px-lg-5"
@@ -66,15 +46,18 @@ function Navbar ({myLoader}) {
                 aria-controls="navbarResponsive"
                 aria-expanded="false"
                 aria-label="Toggle navigation">
-                <GiHamburgerMenu className="navbar-toggler-icon mt-2"/>
+                    { !isOpen ?
+                <FaBars className="navbar-toggler-icon mt-2" /> :
+                <ImCross className=" fs-2 cross" /> 
+            }
                 </button>
-                }
 
                 <div className={isOpen ? "collapsed navbar-collapse bg-dark  show" : "collapse navbar-collapse d-none" } id="navbarResponsive">
                     <ul className="navbar-nav text-uppercase ms-auto my-2 my-lg-0">
                     { navItems.map((items)=> {
                         return (
-                                          <Link
+                            <Link
+                            
                             key={items.id}
                             activeClass="active"
                             className="nav-item"
@@ -85,7 +68,8 @@ function Navbar ({myLoader}) {
                             offset={-70}
                             duration={500}
                             passRef>
-                            <a className="nav-link">{items.title}</a>
+                            <a className="nav-link"
+                            onClick={ () => setIsopen(false)}>{items.title}</a>
                             </Link>
                         )})
                     }

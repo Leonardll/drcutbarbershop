@@ -1,7 +1,7 @@
 //import { getStorage, ref } from "firebase/storage";
 import { initializeApp } from 'firebase/app';
-import { getStorage , ref, listAll } from "firebase/storage";
-
+import { getStorage , ref, listAll, getDownloadURL } from "firebase/storage";
+import { getFirestore } from "firebase/firestore"
 
 const API_KEY_BASE = process.env.NEXT_PUBLIC_API_KEY_BASE
 const auth_domain = process.env.NEXT_PUBLIC_AUTH_DOMAIN
@@ -18,18 +18,20 @@ const firebaseConfig = initializeApp({
   authDomain: auth_domain,
   databaseURL: databaseUrl,
   storageBucket: storageBucket,
-  // messagingSenderId: messagingSender,
-  // appId: appId ,
-  // measurementId: mesurementId,                                                           
+   messagingSenderId: messagingSender,
+   appId: appId ,
+   measurementId: mesurementId,   
+   projectId: "drcutthebarbershow",                                                        
 });
 
 
 // Get a reference to the storage service, which is used to create references in your storage bucket const storage = getStorage(firebase);
 const storage = getStorage(firebaseConfig)
+const db = getFirestore()
 const getRef = ref
 const getAllItems = listAll
 
-export { storage, getRef, getAllItems}
+export { storage, getRef, getAllItems, getDownloadURL,db}
 
 
 
