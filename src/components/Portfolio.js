@@ -13,27 +13,27 @@ function Mycarousel ({myLoader}) {
       </div>
       <div className="container-fluid">
 
-      <Carousel fade variant="light">
+      <Carousel fade variant="dark">
       {galleryLinks.map((haircut) => {
         return (
           <Carousel.Item key={haircut.id}>
            <Image
+             loading="lazy"
+             placeholder="blur" 
+             blurDataURL={`/img/portfolio/t_${haircut.id}.jpg`}
              layout="responsive"
              loader={myLoader}
              width={1000}
              height={500}
-             className="d-block"
-             src={`/img/portfolio/thumbnails/t_${haircut.id}.jpg`}
+             className=""
+             src={`/img/portfolio/t_${haircut.id}.jpg`}
              alt="..."
-             sizes="50vw"
              objectFit="cover"
-             priority={true}
+             sizes="(max-width: 500px) 100px, (max-width: 1023px) 400px, 1000px"
+
              
              />
-           <Carousel.Caption>
-             <h5>{haircut.title}</h5>
-             <p>{haircut.haircutName}</p>
-           </Carousel.Caption>
+        
          </Carousel.Item>
           )
         })}

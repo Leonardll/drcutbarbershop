@@ -4,7 +4,6 @@ import { useState,  useEffect } from 'react'
 import { ImCross } from 'react-icons/im'
 import { FaBars } from 'react-icons/fa'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 
 
 const navItems = [
@@ -32,7 +31,6 @@ function Navbar ({myLoader}) {
                     loader={myLoader}
                     fill="black"
                     priority={true}
-                    //layout='responsive'
 
                 />{' '}
                 </a>
@@ -47,12 +45,12 @@ function Navbar ({myLoader}) {
                 aria-expanded="false"
                 aria-label="Toggle navigation">
                     { !isOpen ?
-                <FaBars className="navbar-toggler-icon" /> :
-                <ImCross className=" fs-2 cross" /> 
+                <FaBars className= "navbar-toggler-icon"  /> :
+                <ImCross className= " fs-1 cross" /> 
             }
                 </button>
 
-                <div className={isOpen ? "collapsed navbar-collapse bg-dark  show" : "collapse navbar-collapse d-none" } id="navbarResponsive">
+                <div className={isOpen ? "collapsed navbar-collapse bg-dark show" : "collapse navbar-collapse" } id="navbarResponsive">
                     <ul className="navbar-nav text-uppercase ms-auto my-2 my-lg-0">
                     { navItems.map((items)=> {
                         return (

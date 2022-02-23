@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Navbar from "../components/Navbar";
 import Services from "../components/Services";
 import ContactCard from "../components/ContactCard";
 import ScrollToTop from "../components/ScrollToTop";

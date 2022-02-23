@@ -49,15 +49,18 @@ function Team ({docs, myLoader2}) {
                             <div className="col-lg-4" key={barber.id}>
                             <div className="team-member">
                                 <Image
+                                loading='lazy'
+                                placeholder="blur" 
+                                blurDataURL={barber.image}
                                 loader={myLoader2}
                                 className="mx-auto rounded-circle img-fluid" 
                                 src={barber.image} 
-                                alt="..."
+                                alt={barber.name}
                                 width={250}
                                 height={250}
                                 objectFit='cover'
                                 layout='responsive'
-                                priority={true}
+                                
                                  />
                                 <h4 className="text-capitalize">{barber.name}</h4>
                                 <p className=" description">{barber.description}</p>

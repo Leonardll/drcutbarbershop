@@ -9,6 +9,9 @@ function ContactCard() {
     return (
         <section className="page-section py-0 w-100" id="contact">
           <div className="container-fluid">
+           <div className='text-center mb-5'>
+            <h2 className='text-uppercase'>Contact</h2>
+            </div> 
         <div className="row bg-white justify-content-center">
             <div className="col-lg-8 mb-4">
                 <div
