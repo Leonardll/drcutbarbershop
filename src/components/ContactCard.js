@@ -1,7 +1,8 @@
 
-import Card from 'react-bootstrap/card'
+import dynamic from 'next/dynamic'
 import { FaInstagram, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa'
-import LocactionCard from './LocationCard'
+
+const LocactionCard = dynamic(() => import( "./LocationCard")) ;
 
 
 

@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image'
-import { useState,  useEffect } from 'react'
+import { useState } from 'react'
 import { ImCross } from 'react-icons/im'
 import { FaBars } from 'react-icons/fa'
 import Link from 'next/link'
@@ -24,7 +24,7 @@ function Navbar ({myLoader}) {
             <Link href="/#main" passHref>
                 <a className="navbar-brand px-2" href="#main">
                 <Image
-                    src="/img/logo/logo.svg"
+                    src={"/img/logo/logo.svg"}
                     alt=""
                     width={100}
                     height={80}

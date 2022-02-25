@@ -44,7 +44,7 @@ function LocationCard () {
             animation: window.google.maps.Animation.DROP,
             title: `${location.address}`,
           });
-      marker.addListener("click", toggleBounce)
+      marker.addListener("click", toggleBounce,{passive: true})
     });
     function toggleBounce() {
       if (marker.getAnimation() !== null) {

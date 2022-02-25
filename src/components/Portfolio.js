@@ -30,8 +30,7 @@ function Mycarousel ({myLoader}) {
              alt="..."
              objectFit="cover"
              sizes="(max-width: 500px) 100px, (max-width: 1023px) 400px, 1000px"
-
-             
+             srcSet="large.jpg 1024w, medium.jpg 640w,small.jpg 320w"
              />
         
          </Carousel.Item>

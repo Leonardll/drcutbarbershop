@@ -1,12 +1,15 @@
-import Services from "../components/Services";
-import ContactCard from "../components/ContactCard";
-import ScrollToTop from "../components/ScrollToTop";
-import Booksy from "../components/Booksy";
-import Carousel from "../components/Portfolio";
-import Team from "../components/Team";
-import {getRef, storage, getAllItems, getDownloadURL } from "../../base";
-import  useFireStore from "../hooks/useFireStore";
+import dynamic from 'next/dynamic'
+const Services = dynamic(() => import( "../components/Services")) ;
+const ContactCard = dynamic(() => import( "../components/ContactCard")) ;
+const ScrollToTop = dynamic(() => import( "../components/ScrollToTop")) ;
+const Booksy = dynamic(() => import( "../components/Booksy")) ;
+const Carousel = dynamic(() => import( "../components/Portfolio")) ;
+const Team = dynamic(() => import( "../components/Team")) ;
 
+//import {getRef, storage, getAllItems, getDownloadURL } from "../../base";
+
+
+import  useFireStore from "../hooks/useFireStore";
 //  const mypicks = getRef(storage,'barber/')
  
 

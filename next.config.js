@@ -11,6 +11,7 @@ module.exports = withImages( {
     domains: ['drcutthebarbershow.web.app','firebasestorage.googleapis.com'],
    
   },
+  
   productionBrowserSourceMaps: true,
   reactStrictMode: true,
   sassOptions: {

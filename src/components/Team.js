@@ -60,7 +60,8 @@ function Team ({docs, myLoader2}) {
                                 height={250}
                                 objectFit='cover'
                                 layout='responsive'
-                                
+                                sizes="(min-width: 36em) calc(.333 * (100vw - 12em)),100vw"
+                                srcSet="large.jpg 1024w, medium.jpg 640w,small.jpg 320w"
                                  />
                                 <h4 className="text-capitalize">{barber.name}</h4>
                                 <p className=" description">{barber.description}</p>

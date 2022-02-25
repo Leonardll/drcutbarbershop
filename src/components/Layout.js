@@ -1,5 +1,7 @@
-import Footer from "./Footer";
-import Navbar from "./Navbar";
+import dynamic from 'next/dynamic'
+
+const Footer = dynamic(() => import( "./Footer")) ;
+const Navbar= dynamic(() => import( "./Navbar")) ;
 import Head from "next/head";
 import React from "react";
 import ScrollToTop from "./ScrollToTop";

@@ -1,7 +1,6 @@
 import { FaCircle } from 'react-icons/fa'
 import  { serviceLinks } from '../../Data'
 import { motion } from 'framer-motion'
-//import{ BarberChair, Clipper, HairStyle} from './Icons'
 
 
 const data = serviceLinks;
