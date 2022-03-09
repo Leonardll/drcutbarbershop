@@ -1,3 +1,4 @@
+@import "~bootstrap/scss/bootstrap.scss";
 
 .page-section {
   padding: 2rem 0;
@@ -214,6 +215,9 @@ svg {
 //   justify-content: center;
 //   align-items: center;
 // }
+.fixed-bottom {
+  bottom: 2.5em;
+}
 
 .footer a {
    display: flex;
@@ -274,7 +278,6 @@ svg {
 
 }
 
-@import "~bootstrap/scss/bootstrap.scss";
 
 
 
